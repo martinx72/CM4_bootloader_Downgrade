@@ -14,7 +14,7 @@ The **2021 Feb 16 verson (1613481816)** of bootloader is the best option during 
   - Step **2**, Copy the pre-configured bootloader **pieeprom-1613481816.bin** from current repo in the root folder of the USB thumb drive. And, modify the config.txt file to make sure your USB is enabled on CM4. Add this at the end of **config.txt**
 >dtoverlay=dwc2,dr_mode=host
   - Step **3**, it is about time to boot the CM4, you can use **ssh** to access teh CM4 or just USB keyboard. And type this command to downgarde the bootloader of CM4
->sudo rpi-update
+>sudo rpi-update \
 >sudo CM4_ENABLE_RPI_EEPROM_UPDATE=1 rpi-eeprom-update -d -f /boot/pieeprom-1613481816.bin
 - Step **4**, Now you can reboot the CM4
 >sudo reboot
